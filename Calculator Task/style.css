@@ -1,0 +1,107 @@
+
+:root{
+    --white:#fff;
+    --red:red;
+    --beige:rgb(244, 244, 236);
+}
+body{
+width:90%;
+height:80vh;
+background-color:var(--white);
+display: flex;
+margin:4rem auto;
+justify-content: center;
+align-items: center;
+}
+.container{
+    width:20rem;
+    height: 21rem;
+    background-color: rgb(11, 71, 109);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+}
+.title{
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 3rem;
+
+margin-top: 2rem;
+padding: 0rem 1rem 0 1rem;
+}
+.selector{
+    width: 2.5rem;
+    position: relative;
+    height: 1rem;
+    background-color: rgba(2, 1, 1, 0.334);
+    border-radius: 2rem;
+    cursor:pointer;
+}
+.right span{
+    padding-right: 0.8rem;
+    color:var(--white);
+}
+.selector::after{
+    content: "";
+    position: absolute;
+    background-color: var(--red);
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+}
+.selector::before{
+    content: "1 2 3";
+    width: 5rem;
+    color:var(--white);
+    bottom: 1.3rem;
+    position: absolute;
+    padding-right: 5rem;
+    text-align: start;
+}
+.right{
+    display: flex;
+    justify-content: space-between
+}
+.left{
+    color: var(--white);
+    
+}
+.buttons{
+    box-sizing: border-box;
+    padding: 1rem;
+        height: 14rem;
+        display: grid;
+        margin: 1rem;
+    background-color: #fff;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+.buttons button{
+    margin-right:0.4rem;
+    margin-bottom:0.4rem;
+    border-radius: 0.5rem;
+    /* background-color: var(--beige); */
+    /* border-bottom: 1px solid var(--beige); */
+    box-shadow: 1px 1px 1px 1px rgba(217, 217, 217, 0.9);
+    border: none;
+    cursor:pointer;
+
+}
+.reset-btn{
+    grid-column: 1/span 2;
+    
+    color:var(--white);
+    background-color: rgba(11, 71, 109, 0.815);
+
+   
+}
+.del-btn{
+    background-color: rgba(11, 71, 109, 0.815);
+    color:var(--white);
+
+}
+.equal-btn{
+    grid-column: 3/span 2;
+}
